@@ -20,7 +20,7 @@ public class Controller_Restaurant {
         Dish secondDish = new Dish(2, "Chicken soup", 25.99, "Mashed potato with meat");
         Dish thirdDish = new Dish(3, "Greek salad", 40.99, "Mashed potato with meat");
         Dish fourthDish = new Dish(4, "Roasted potato", 34.99, "Mashed potato with meat");
-        Dish fifthDish = new Dish(5, "Roasted potato", 34.99, "Mashed potato with meat");
+        Dish fifthDish = new Dish(5, "Roasted vegetables", 34.99, "Mashed potato with meat");
         arrayList.add(firstDish);
         arrayList.add(secondDish);
         arrayList.add(thirdDish);
