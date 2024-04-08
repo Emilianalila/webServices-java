@@ -17,7 +17,6 @@ public class ControllerList {
     @GetMapping("/posts")
     @ResponseBody
     public List<Post> getAllPost(){
-
         return repo.getList();// this method is not implement it in the interface, but I have a class that is using or implementing that interface and overriding the method that I'm calling, so it will call that one instead!!!
     }
 }
