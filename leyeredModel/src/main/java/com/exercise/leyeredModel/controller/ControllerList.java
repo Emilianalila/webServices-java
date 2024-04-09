@@ -11,8 +11,12 @@ import java.util.List;
 @RestController
 public class ControllerList {
     //I need to use the method "getList" that I have in the repository layer in this controller layer. so I use @Autowired to get the interface IPostRepository, instantiate it, but only declaring it, not "assigning it"
-    @Autowired
-    IPostRepository repo; // instantiation of an object interface
+    @Autowired//dependency injection using "interface"
+    private IPostRepository repo; // instantiation of an object interface
+
+    /*public ControllerList(IPostRepository repo) { // dependency injection using a "constructor", without the interface and the @Autowired
+        this.repo = repo;
+    }*/
 
     @GetMapping("/posts")
     @ResponseBody
