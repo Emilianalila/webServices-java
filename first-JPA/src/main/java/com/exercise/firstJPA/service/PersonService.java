@@ -4,13 +4,14 @@ import com.exercise.firstJPA.repository.IPersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-
+//Since IPersonaRepository will be the class in charge of providing the data from the database,
+// we have to instantiate an object (repo) which will allow us to use exclusive JPA methods,
+// for example (findAll) brings us all the people from the database and injects them into this service class
 @Service
 public class PersonService implements IPersonService {
     //dependency injection from repository
     @Autowired
     private IPersonRepository repo;
-
 
     @Override
     public List<Person> getPeople() {
@@ -21,7 +22,6 @@ public class PersonService implements IPersonService {
     @Override
     public void savePerson(Person person) {
         repo.save(person);  // we create person in IPersonService, when we create the method and passing the parameter Person person
-
     }
 
     @Override
@@ -45,5 +45,10 @@ public class PersonService implements IPersonService {
         perso.setAge(newAge);
         //save the changes or override the changes in the database.
         this.savePerson(perso);
+    }
+
+    @Override
+    public void editPer(Person per) {
+        this.savePerson(per);//save also modify not only save
     }
 }

@@ -22,4 +22,5 @@ public interface IPersonService {
     public void editPerson(Long id, Long newId, String newName, String newLastName,
                            Integer newAge);
 
+    void editPer(Person per);
 }

@@ -39,11 +39,16 @@ public class PersonController {
                                @RequestParam(required = false, name="lastName")String newLastName,
                                @RequestParam(required = false, name="age") Integer newAge){
          //send the original id (for find)
-        //send new data for modification
+        //send new data for modification to the service, particularly a PersonService (editPerson)
          interPerson.editPerson(id,newId,newName, newLastName, newAge);
          // find the person updated and show it on the response
          Person perso = interPerson.findPerson(id);
          return perso;
+    }
+    @PutMapping("/edit") //c)
+    public Person updatePerson(@RequestBody Person per){// when I send the info in JSON the id it has to be one that have already in our database
+        interPerson.editPer(per);
+        return interPerson.findPerson(per.getId());
     }
 }
 
