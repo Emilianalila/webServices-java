@@ -13,7 +13,7 @@ public class PostRepository implements IPostRepository {
     public List<Post> getList() {
         List <Post> postList = new ArrayList<>();
         postList.add(new Post(89, "The life is beautiful", "Emiliana"));
-        postList.add(new Post(80, "The life is wonderful", "Maria"));
+        postList.add(new Post(80, "Life is wonderful", "Maria"));
 
         return postList;
     }

@@ -1,5 +1,4 @@
 package com.exercise.firstJPA.controller;
-
 import com.exercise.firstJPA.model.Person;
 import com.exercise.firstJPA.repository.IPersonRepository;
 import com.exercise.firstJPA.service.IPersonService;
@@ -7,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin//(origins = "http://localhost:8080")//to fix the origin CORS
 @RestController
 public class PersonController {
     //dependency injection from service
      @Autowired
     private IPersonService interPerson;
 
-     //endpoints for CRUD operations
+     //endpoints for CRUD operations.....(create, read, update, delete)
      @GetMapping("/listPeople")
      public List<Person> getAllPersons(){
          return interPerson.getPeople();

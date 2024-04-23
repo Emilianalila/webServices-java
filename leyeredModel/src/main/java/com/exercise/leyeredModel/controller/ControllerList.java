@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
-// the controller receive the request
+
 @RestController
 public class ControllerList {
     //I need to use the method "getList" that I have in the repository layer in this controller layer. so I use @Autowired to get the interface IPostRepository, instantiate it, but only declaring it, not "assigning it"

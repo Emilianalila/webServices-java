@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 //Since IPersonaRepository will be the class in charge of providing the data from the database,
-// we have to instantiate an object (repo) which will allow us to use exclusive JPA methods,
+// we have to instantiate an object (repo) which will allow us to use exclusive JPA "methods",
 // for example (findAll) brings us all the people from the database and injects them into this service class
 @Service
 public class PersonService implements IPersonService {
@@ -18,7 +18,6 @@ public class PersonService implements IPersonService {
         List <Person> listPerson = repo.findAll();
         return listPerson;
     }
-
     @Override
     public void savePerson(Person person) {
         repo.save(person);  // we create person in IPersonService, when we create the method and passing the parameter Person person
