@@ -1,5 +1,4 @@
-package com.exercise.accommodationDTO;
-
+package com.exercise.accommodationDTO.models;
 import lombok.Getter;
 import lombok.Setter;
 

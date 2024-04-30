@@ -16,9 +16,9 @@ public class PersonController {
      //endpoints for CRUD operations.....(create, read, update, delete)
      @GetMapping("/listPeople")
      public List<Person> getAllPersons(){
-         return interPerson.getPeople();
+         return interPerson.getPeople();// it gives me the method that we override in the class PersonService
      }
-     //post is always void
+     //post is always void, but here we return a String because we want to return a message of successful when someone created a new person
      @PostMapping("/createPerson")
     public String createPerson(@RequestBody Person person){
           interPerson.savePerson(person);

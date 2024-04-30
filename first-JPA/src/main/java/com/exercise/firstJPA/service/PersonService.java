@@ -4,9 +4,9 @@ import com.exercise.firstJPA.repository.IPersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-//Since IPersonaRepository will be the class in charge of providing the data from the database,
-// we have to instantiate an object (repo) which will allow us to use exclusive JPA "methods",
-// for example (findAll) brings us all the people from the database and injects them into this service class
+//Since IPersonRepository will be the interface in charge of providing the data from the database,
+// we have to "instantiate" an object (repo) which will allow us to use exclusive JPA "methods",
+// for example: (.findAll, .deleteById()) brings us all the people from the database and "injects" them into this service class.
 @Service
 public class PersonService implements IPersonService {
     //dependency injection from repository

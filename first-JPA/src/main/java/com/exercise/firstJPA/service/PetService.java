@@ -1,17 +1,15 @@
 package com.exercise.firstJPA.service;
-
 import com.exercise.firstJPA.model.Pet;
 import com.exercise.firstJPA.repository.IPetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public class PetService implements IPetService{
     //dependency injection from Repository, because there we have all the classes
     @Autowired
-    private IPetRepository repoPet;  // allow us to use special methods from the class JpaRepository<Pet, Long>, and inject data from the database
+    private IPetRepository repoPet;  // allow us to use "special methods" from the class JpaRepository<Pet, Long>, and inject data from the database
 
     //methods to override or implements
     @Override
