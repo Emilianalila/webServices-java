@@ -17,16 +17,19 @@ public class PetController {
     public List<Pet> getAllPets(){
          return petSer.getPets();
      }
+
      @PostMapping("/savePet")
     public String createPet(@RequestBody Pet onePet){
          petSer.savePet(onePet);
          return "Create Pet successful!";
      }
+
      @DeleteMapping("/deletePet")
     public String deletePet(@RequestBody Long id){
          petSer.deletePet(id);
          return "The delete of the pet was successful!";
      }
+
      @PutMapping("/editPet")
     public Pet editPet(@PathVariable Long id,
                        @RequestParam(required = false, name="id") Long newId,// we use RequestParam for codify or encode the information of the user

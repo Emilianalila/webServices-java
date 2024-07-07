@@ -12,6 +12,9 @@ public class PersonService implements IPersonService {
     //dependency injection from repository
     @Autowired
     private IPersonRepository repo;
+    /*public PersonService (IPersonRepository repo){ //  dependency injection using a constructor
+        this.repo = repo;
+    }*/
 
     @Override
     public List<Person> getPeople() {
