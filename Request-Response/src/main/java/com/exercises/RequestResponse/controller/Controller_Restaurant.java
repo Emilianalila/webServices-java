@@ -26,7 +26,6 @@ public class Controller_Restaurant {
         arrayList.add(thirdDish);
         arrayList.add(fourthDish);
         arrayList.add(fifthDish);
-
         // depend on the id parameter that the client give us, we are going to return only one dish
         for (Dish currentDish : arrayList) {
             if (currentDish.getNumber() == id) {

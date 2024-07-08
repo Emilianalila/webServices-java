@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Request-Response2" />
+        <module name="first-JPA" />
+        <module name="accommodationDTO" />
+        <module name="prueba" />
+        <module name="Request-Response" />
+        <module name="leyeredModel" />
+        <module name="SecondSpringApp" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Request-Response" options="-parameters" />
+      <module name="Request-Response2" options="-parameters" />
+      <module name="SecondSpringApp" options="-parameters" />
+      <module name="accommodationDTO" options="-parameters" />
+      <module name="first-JPA" options="-parameters" />
+      <module name="leyeredModel" options="-parameters" />
+      <module name="prueba" options="-parameters" />
+    </option>
+  </component>
+</project>
